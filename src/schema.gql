@@ -1,0 +1,46 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Adress {
+  userId: Int!
+  streetName: String!
+  number: Int!
+  zipcode: String!
+  city: String!
+  state: String!
+  country: String!
+}
+
+type User {
+  id: Int!
+  email: String!
+  username: String
+  isActive: Boolean!
+  adress: Adress
+}
+
+type Query {
+  findUserById(id: Int!): User
+  findAll: [User!]!
+}
+
+type Mutation {
+  createUser(createUserDto: CreateUserDto!): User!
+  createAdress(createAdressDto: CreateAdressDto!): Adress!
+}
+
+input CreateUserDto {
+  email: String!
+  username: String
+}
+
+input CreateAdressDto {
+  userId: Int!
+  streetName: String!
+  number: Int!
+  zipcode: String!
+  city: String!
+  state: String!
+  country: String!
+}
