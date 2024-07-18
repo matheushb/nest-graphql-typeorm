@@ -12,7 +12,7 @@ import { User } from '../models/user.model';
 import { users } from 'src/_mocks_/users.mock';
 import { addresses } from 'src/_mocks_/adress.mock';
 import { CreateUserDto } from './dtos/create-user.dto';
-import { Adress } from 'src/graphql/adress/models/user-adress.model';
+import { Adress } from 'src/graphql/adress/models/adress.model';
 
 let inc = 6;
 
